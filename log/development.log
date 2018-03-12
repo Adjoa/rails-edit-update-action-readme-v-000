@@ -476,3 +476,14 @@ RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"OcREKYO9G
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+
+
+Started PUT "/posts/1" for 72.252.198.128 at 2018-03-12 16:06:18 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OcREKYO9GIusXohNU8FJMjgOFXA78x1q9uI4KlwEyDoD92/VCk443hoE8aDdiEBJ4XMzkNkMIRcjLlk7zxGjFA==", "title"=>"Rails Introduction Quiz", "description"=>"What is Rails?", "commit"=>"Submit Post", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "What is Rails?"], ["updated_at", "2018-03-12 16:06:18.518891"], ["id", 1]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.90.214:33827/posts/1
+Completed 302 Found in 18ms (ActiveRecord: 4.9ms)
