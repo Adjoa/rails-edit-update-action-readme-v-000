@@ -487,3 +487,11 @@ Processing by PostsController#update as HTML
   [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
 Redirected to http://165.227.90.214:33827/posts/1
 Completed 302 Found in 18ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/posts/1" for 72.252.198.128 at 2018-03-12 16:06:18 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms)
